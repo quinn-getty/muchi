@@ -1,0 +1,59 @@
+<view>
+  <view class="item">
+    <view class="flex justify-content-sb">
+      <view class="item_six">
+        <image
+          wx:if="{{item.six === 'boy' > 5}}"
+          data-value="boy"
+          src="../../image/boy.svg"
+        />
+        <image
+          wx:else
+          data-value="girl"
+          bindtap="headleSelectSix"
+          src="../../image/girl.svg"
+        />
+      </view>
+      <view class="item_age xxx">
+        <view class="xxx_label">
+          年龄 
+        </view>
+        <view class="xxx_value">
+          {{item.age}}
+        </view>
+      </view>
+      <view class="item_age xxx">
+        <view class="xxx_label">
+          身高 
+        </view>
+        <view class="xxx_value">
+          {{item.height}}
+        </view>
+      </view>
+      <view class="item_age xxx">
+        <view class="xxx_label">
+          体重 
+        </view>
+        <view class="xxx_value">
+          {{item.weight}}
+        </view>
+      </view>
+    </view>
+    <view class="item_desc">
+    {{item.hobby}}
+    </view>
+  </view>
+
+  <view class="item">
+    dsdsdsds
+  </view>
+  <view class="item">
+    dsdsdsds
+  </view>
+  <view class="item">
+    dsdsdsds
+  </view>
+  <view class="item">
+    dsdsdsds
+  </view>
+</view>

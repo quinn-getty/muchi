@@ -1,0 +1,5 @@
+<view class="notdata">
+    <image src="../../image/08.png"></image>
+    <view>还没有许愿~  快来许愿吧！</view>
+</view>
+<view bindtap="addrouter" class="home_add"></view>

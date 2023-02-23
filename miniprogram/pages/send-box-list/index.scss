@@ -1,0 +1,55 @@
+/* pages/box-list/index.wxss */
+page{
+  background-color: #E7F1FC;
+  padding: 10rpx 0;
+}
+.item{
+  margin: 30rpx;
+  border-radius: 20rpx;
+  height: 300rpx;
+  box-shadow: 0rpx 0rpx 8rpx hsl(83, 66%, 64%);
+  background: #fff;
+}
+.item_six{
+  image{
+    width: 70rpx;
+    height: 70rpx;
+  }
+}
+.xxx{
+  display: flex;
+  border-radius: 40rpx;
+  height: 60rpx;
+  box-shadow: 0rpx 0rpx 8rpx #208dec;
+  .xxx_label{
+    background-color: #8dc4f3;
+    border-top-left-radius: 40rpx;
+    border-bottom-left-radius: 40rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+    padding: 20rpx;
+    color: #fff;
+  }
+  .xxx_value{
+    background-color: #b1d1ec;
+    border-top-right-radius: 40rpx;
+    border-bottom-right-radius: 40rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+    padding: 20rpx;
+  }
+}
+.flex{
+  display: flex;
+}
+.justify-content-sb{
+  justify-content: space-between;
+}
+.item_desc{
+  line-clamp: 3; // 用来限制在一个块元素显示的文本的行数
+  display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
+  box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
+  text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
+  word-break: break-all;
+  overflow: hidden;
+}

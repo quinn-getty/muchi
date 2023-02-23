@@ -1,0 +1,106 @@
+<!--pages/add-box/index.wxml-->
+<view class="add">
+  <view class="item">
+        <view class="item_title">位置</view>
+        <view class="item_content">
+          <view class="item_content_input">
+           -
+          </view>
+          <text class="item_content_fix location_button" bindtap='getLocation'>获取位置</text>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_title">性别</view>
+        <view class="item_content">
+          <view class="item_content_input">
+            <image
+              data-value="boy"
+              bindtap="headleSelectSix"
+              class="{{ formData.six === 'boy' ? 'six six_boy six_checked': 'six six_boy' }}"
+              src="../../image/boy.svg"
+            />
+            <image
+              data-value="girl"
+              bindtap="headleSelectSix"
+              class="{{formData.six === 'girl' ? 'six six_boy six_checked': 'six six_boy' }}"
+              src="../../image/girl.svg"
+            />
+          </view>
+          <text class="item_content_fix">{{formData.six === 'girl' ? "女" : formData.six === 'boy' ? '男' : ''}}</text>
+        </view>
+    </view>
+    <view class="add_title">
+        <view class="add_title_size">年龄</view>
+        <input
+          type="number"
+          data-type="age"
+          bindinput="headleInput"
+          class="add_title_inp" 
+          placeholder="快来写下你的年龄吧！"
+          value="{{formData.age}}"
+        />
+    </view>
+    <view class="item">
+      <view class="item_title">身高</view>
+        <view class="item_content">
+          <input
+            type="number"
+            data-type="height"
+            bindinput="headleInput"
+            class="item_content_input" 
+            placeholder="快来写下你的身高吧！"
+            value="{{formData.height}}"
+          />
+          <text class="item_content_fix">cm</text>
+        </view>
+    </view>
+    <view class="add_content">
+        <view class="add_content_title">联系方式</view>
+        <view class="add_content_line_content">
+          <input
+            data-type="contact"
+            bindinput="headleInput"
+            class="add_content_line_content_input" 
+            placeholder="快来写下你的联系方式吧！"
+            value="{{formData.contact}}"
+          />
+          <text class="add_content_line_content_fix">微信/QQ</text>
+        </view>
+    </view>
+    <view class="add_content">
+        <view class="add_content_title">兴趣爱好</view>
+        <view class="add_content_main">
+            <textarea 
+              class="add_content_main_text"
+              bindinput="headleInput"
+              data-type="hobby"
+              maxlength="100"
+              placeholder="{{hobbyTextarea}}"
+              value="{{formData.hobby}}" 
+            />
+        </view>
+        <view class="add_content_count">{{formData.hobby.length}} / 200</view>
+    </view>
+    <view class="add_content">
+        <view class="add_content_title">交友期望</view>
+        <view class="add_content_main">
+            <textarea 
+              maxlength="200"
+              bindinput="headleInput"
+              data-type="expect"
+              placeholder="{{expectTextarea}}"
+              value="{{formData.expect}}" 
+            />
+        </view>
+        <view class="add_content_count">{{formData.expect.length}} / 100</view>
+    </view>
+    <view class="add_button" bindtap="onSubmit">
+      发送 ❥
+    </view>
+    <text class="botton_text">
+      真诚才是必杀技，<br/>
+      请真实填写自己的信息呦~
+    </text>
+</view>
+
+

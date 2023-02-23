@@ -1,0 +1,30 @@
+/* pages/mtydream/index.wxss */
+page{
+  background-color: #E7F1FC;
+}
+.tadream-nomain{
+  position: relative;
+  top: 140rpx;
+  left: 60rpx;
+  width: 315rpx;
+  height: 403rpx;
+  color: rgba(16, 16, 16, 100);
+  font-size: 20px;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  image:nth-child(1) {
+    position: absolute;
+    width: 630rpx;
+    height: 806rpx;
+    left: 0;
+    top: 0;
+  }
+  .h1 {
+    position: absolute;
+    left: 88rpx;
+    top: 96rpx;
+    width: 436rpx;
+    height: 206rpx;
+    color: #E7F1FC;
+  }
+}

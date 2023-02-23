@@ -1,0 +1,33 @@
+<view class="mine">
+    <view class="mine_title_portrait">
+      <view class="mine_title_portrait-left">
+          <image src="{{userinfo.avatarUrl}}"></image>
+          <view>{{userinfo.nickName}}</view>
+      </view>
+      <view class="mine_title_portrait-right">
+        <view class="card_id">ID：{{openid || '123456'}} </view>
+        <view class="card_count">今日次数{{openid}} </view>
+        <view class="mine_title_button">你已经加入{{day || 0}}天</view>
+      </view>
+    </view> 
+    <view class="mine_main">
+        <view class="mine_main_cont" bindtap="toSendBoxListPage" data-id="{{openid==datalist.inviter?datalist.recipient:datalist.inviter}}" data-url="/pages/Completed/index">
+            <view class="mine_main_cont_top">已投递20/100</view>
+            <view class="mine_main_cont_left"></view>
+        </view>
+        <view class="mine_main_cont" bindtap="toOpenBoxListPage" data-id="{{datalist._id}}" data-url="/pages/modification/index">
+            <view class="mine_main_cont_top" >已经获取的</view>
+            <view class="mine_main_cont_right"></view>
+        </view>
+    </view>
+</view>
+<view class="add_Mask" wx:if="{{maskshow}}">
+    <view class="add_Mask_content">
+        <view class="add_Mask_content_top">修改Ta</view>
+        <view class="add_Mask_content_cont">是否确认修改Ta？如果确认，双方将清空所有信息，请提前备份</view>
+        <view class="add_Mask_content_button">
+            <view class="add_Mask_content_button_config" bindtap="updateTa">确认修改</view>
+            <view class="add_Mask_content_button_cancel" bindtap="offMask">放弃修改</view>
+        </view>
+    </view>
+</view>
